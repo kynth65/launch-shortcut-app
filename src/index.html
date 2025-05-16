@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>App Launcher</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>App Launcher</h1>
+    
+    <div class="grid-container">
+      <!-- Visual Studio Code -->
+      <button class="app-btn vscode" data-app="vscode">
+        <div class="icon">⌨️</div>
+        <div class="app-name">VS Code</div>
+      </button>
+      
+      <!-- YouTube -->
+      <button class="app-btn youtube" data-url="https://www.youtube.com">
+        <div class="icon">▶️</div>
+        <div class="app-name">YouTube</div>
+      </button>
+      
+      <!-- Spotify -->
+      <button class="app-btn spotify" data-app="spotify">
+        <div class="icon">🎵</div>
+        <div class="app-name">Spotify</div>
+      </button>
+      
+      <!-- Facebook -->
+      <button class="app-btn facebook" data-url="https://www.facebook.com">
+        <div class="icon">👥</div>
+        <div class="app-name">Facebook</div>
+      </button>
+      
+      <!-- Work Button - Launches VS Code, Spotify, and Facebook -->
+      <button class="app-btn work" data-multi="work">
+        <div class="icon">💼</div>
+        <div class="app-name">Work</div>
+      </button>
+    </div>
+    
+    <footer>
+      App Launcher v1.0
+    </footer>
+    
+    <script src="./renderer.js"></script>
+  </body>
+</html>
