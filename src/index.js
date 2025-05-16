@@ -40,15 +40,18 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
       contextIsolation: true,
-      enableRemoteModule: false
+      enableRemoteModule: false,
+      sandbox: true, // Enable Chromium sandbox for extra security
+      spellcheck: false, // Disable spellcheck to prevent potential data leakage
+      webSecurity: true // Ensure web security is enabled
     },
   });
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // DevTools disabled in production
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
